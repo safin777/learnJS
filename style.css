@@ -1,0 +1,36 @@
+*{
+  margin: 0;
+  padding: 0;
+  
+}
+
+.container {
+  background-color: black;
+  color: white;
+  min-width:600px;
+  min-height: 100vh;
+  
+}
+
+.header{
+  text-align: center;
+  background-color: grey;
+  min-height: 25vh;
+  
+}
+
+.title{
+  padding: 10px;
+}
+
+.middle{
+  text-align: center;
+  background-color: rgb(139, 4, 4);
+  min-height: 55vh;
+}
+
+
+
+
+
+
