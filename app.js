@@ -6,6 +6,7 @@ console.log("task 1");
 //syntex of promise in js
 //this take two parameter as function 
 //they works like if else condition in function and callback function 
+//promise define like asyncronus task
 const promise = new Promise(function(resolve , reject) {
   setTimeout(function(){
     if (status){
@@ -17,6 +18,8 @@ const promise = new Promise(function(resolve , reject) {
 });
 
 //calling the promised statement like this section 
+//promise calling
+
 promise
    .then(function(vlaue){
      console.log(vlaue);
@@ -25,3 +28,6 @@ promise
      console.log(err);
    })
 console.log("task 3");
+
+//this is mainly use for standerized the callback function coding which is 
+//simply zigzag :-)
