@@ -11,12 +11,13 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  color: var(--fontPrimary);
+  
   font-family: "Montserrat", sans-serif;
 }
 
 body {
   background-color: var(--lightDark);
+  color: var(--fontPrimary);
 }
 
 /* nav start */
@@ -122,6 +123,7 @@ body {
 
 .active {
   font-weight: bold;
+  color: #35bb78;
 }
 
 .show {
