@@ -10,7 +10,7 @@ function loadMileStoneData() {
             return `<div class="milestone border-b">
       <div class="flex" >
         <div class="checkbox"><input type="checkbox" /></div>
-        <div onclick="openMileStone(this)">
+        <div onclick="openMileStone(this,${milestone._id})">
           <p>
             ${milestone.name}
             <span><i class="fas fa-chevron-down"></i></span>
@@ -31,7 +31,21 @@ function loadMileStoneData() {
         .join("")}`;
 }
 
-function openMileStone(mileStoneElement) {
+function showMileStoneImage(){
+ const mileStoneDetails = document.querySelector(".milestoneDetails");
+  
+ mileStoneDetails.innerHTML = `${mileStonesData.map( (mileStoneDetail) =>{
+   return `<div class="milestoneDetails">
+   <img class="milestoneImage" src="${mileStoneDetail.image}" alt="" />
+
+   <h1 class="title">Module title here</h1>
+   <p class="details">Module description here</p>
+ </div>`
+ } ).join("")}`
+
+}
+
+function openMileStone(mileStoneElement , id) {
     const currentPanel = mileStoneElement.parentNode.nextElementSibling;
     const shownPanel = document.querySelector(".show");
     const active = document.querySelector(".active");
@@ -46,6 +60,8 @@ function openMileStone(mileStoneElement) {
     }
 
     currentPanel.classList.toggle("show");
+
+    showMileStoneImage(id);
 }
 
 loadMileStoneData();
