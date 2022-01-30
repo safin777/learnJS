@@ -7,9 +7,9 @@ function loadMileStoneData() {
 
     mileStones.innerHTML = `${mileStonesData
         .map(function (milestone) {
-            return `<div class="milestone border-b">
+            return `<div class="milestone border-b" id="${milestone._id}">
       <div class="flex" >
-        <div class="checkbox"><input type="checkbox" /></div>
+        <div class="checkbox"><input type="checkbox" onclick="markMileStone(this,${milestone._id})"/></div>
         <div onclick="openMileStone(this,${milestone._id})">
           <p>
             ${milestone.name}
@@ -47,6 +47,27 @@ function showMileStone(id){
 const mileStoneImage = document.querySelector(".milestoneImage");
 mileStoneImage.onload = function(){
   this.style.opacity = "1";
+}
+
+function markMileStone(checkbox,id){
+   const doneList = document.querySelector(".doneList");
+   const mileStoneList = document.querySelector(".milestones");
+
+   const item = document.getElementById(id);
+
+   if (checkbox.checked){
+     //mark as done
+     mileStoneList.removeChild(item);
+     doneList.appendChild(item);
+     
+   }else{
+     //send it to mailestones div as unchecked poroperty
+     doneList.removeChild(item);
+     mileStoneList.appendChild(item);
+
+   }
+
+   
 }
 
 
