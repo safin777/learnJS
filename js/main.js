@@ -67,8 +67,13 @@ function markMileStone(checkbox,id){
 
    }
 
+  //  sortingMileStone(id);
+
    
 }
+
+
+
 
 
 function openMileStone(mileStoneElement , id) {
