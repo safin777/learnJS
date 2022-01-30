@@ -31,19 +31,24 @@ function loadMileStoneData() {
         .join("")}`;
 }
 
-function showMileStoneImage(){
- const mileStoneDetails = document.querySelector(".milestoneDetails");
-  
- mileStoneDetails.innerHTML = `${mileStonesData.map( (mileStoneDetail) =>{
-   return `<div class="milestoneDetails">
-   <img class="milestoneImage" src="${mileStoneDetail.image}" alt="" />
+function showMileStone(id){
+ const mileStoneImage = document.querySelector(".milestoneImage");
+ const mileStoneTitle = document.querySelector(".title");
+ const mileStoneDesc = document.querySelector(".details");
 
-   <h1 class="title">Module title here</h1>
-   <p class="details">Module description here</p>
- </div>`
- } ).join("")}`
-
+  mileStoneImage.style.opacity = "0";
+  mileStoneImage.src = mileStonesData[id].image;
+  mileStoneTitle.innerText = mileStonesData[id].name;
+  mileStoneDesc.innerText = mileStonesData[id].description;
 }
+
+// event listener for hero image 
+//checking if any image loaded or not
+const mileStoneImage = document.querySelector(".milestoneImage");
+mileStoneImage.onload = function(){
+  this.style.opacity = "1";
+}
+
 
 function openMileStone(mileStoneElement , id) {
     const currentPanel = mileStoneElement.parentNode.nextElementSibling;
@@ -61,7 +66,7 @@ function openMileStone(mileStoneElement , id) {
 
     currentPanel.classList.toggle("show");
 
-    showMileStoneImage(id);
+    showMileStone(id);
 }
 
 loadMileStoneData();
