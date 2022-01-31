@@ -56,9 +56,14 @@ let number  = [1,2,3,4,5,6,7,8,9,10];
 //if the function inside find function return true 
 //the searching will be stop there 
 //this mainly used for finding a particuler element from an array
+//array.find(function(currentvalue,currIndex,whole_array){})
+//it will not change the main array 
+//also get this key keyword which carry the value inside the function
+//when use arrow function it dont care about the this keyword
 
-number.find(function(){
-   
+let result=number.find(function(cv){
+   return cv>7;
 });
+console.log(result);
 
 
