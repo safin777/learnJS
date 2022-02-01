@@ -77,4 +77,41 @@ console.log("find the value of 5 with slice() method from array: \n");
 let slice = number.slice(4,-5);
 console.log(slice);
 
+//splice means connecting array 
+//to cut out a particuler elements from array
+//take 3 parameter (where to cut,how many want to cut ,which thing want to add)
+//it change the main array 
+
+
+//#########array concat()###############
+
+//this method add two or multiple array and return a new array
+//do not change the main array
+
+
+
+//###########  array.push() #################
+//insert element to an array and change the main array
+
+
+
+//########### array.map() #############
+//most used and important method in array 
+//work like a for loop
+//travers each element of an array and can take action on each of the element of the array
+//it has call back function inside the method
+//do not change the main array
+
+let x = number.map( function(ele){
+   return ele * 2;
+}).join("\n")
+
+console.log(x);
+console.log(number);
+
+
+
+//################### array.reduce()  #####################
+
 //
+
