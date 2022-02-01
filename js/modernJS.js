@@ -67,3 +67,14 @@ let result=number.find(function(cv){
 console.log(result);
 
 
+// array filter()
+//array findIndex()
+
+
+//array slice()//this method cut out value from an array 
+//to find the value 5
+console.log("find the value of 5 with slice() method from array: \n");
+let slice = number.slice(4,-5);
+console.log(slice);
+
+//
