@@ -136,4 +136,31 @@ let entries = Object.entries(myobb)
 console.log(entries);
 
 
-//
+//function default 
+//it will bydeafult take a value inside func if you do not pass a value inside a function 
+
+
+//###################spread operator ##################
+
+ let sage = [2,4,6,7,8];
+
+ let newAge = [...sage,0,11,34,54,645,543] //the ... is the spread operator 
+ //this is mainly used for get the value of others array 
+ //to make a cory array not to change the main array
+ //it also works in object
+ console.log("using spread operator the new arraY is:");
+ console.log(newAge);
+
+
+ //############## Rest operator ###################
+ //when we use  ... in the parameter inside a function then it is called rest operator
+ //when we want to send unlimited value by using only a single argumnets and return like array then we use rest-op inside a function
+//we use (...anyVariableName);
+//it should be use as a last parameter if we use multiple args
+ console.log("Example of rest operator");
+
+ function restOp (...a){
+   console.log(a);
+ }
+
+ restOp(1,2,3,4,5,6,7)
