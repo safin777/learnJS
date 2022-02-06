@@ -164,3 +164,35 @@ console.log(entries);
  }
 
  restOp(1,2,3,4,5,6,7)
+
+
+
+ ///############### Destructuring ####################
+//this feature us mainly use for destructuring a new object
+//if we want to collect a object property and want to assign in a variable then wee have to use destructuring 
+
+//example for nested object 
+
+const userData= {
+    name : "JavaScript",   
+    developed: 1995,
+    framework:{
+        id: 1,
+        name: "React",
+        used: "FronEnd",
+    },
+}
+
+
+const { framework:{used:usedfor} = {} } = userData; //style of object destructuring 
+console.log(usedfor);
+
+
+//array destructuring 
+
+let abcd = [1,2,3,4,[45,453,65,35],335,76];
+
+var [,,,,[,a,b,]] = abcd; 
+var [...c] = abcd;
+console.log(a,b);
+console.log(c);
