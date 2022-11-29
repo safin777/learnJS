@@ -15,7 +15,7 @@ export default function ConditionalCom() {
   return (
     //return here the variable which is set based on condition
     <>
-      <div className="mt-20">
+      <div className="mt-20 bg-gray-100">
       {output} 
       </div>
     </>
