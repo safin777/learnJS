@@ -6,6 +6,8 @@ import Nav from "./Components/Nav.jsx";
 //import Profile from "./Components/Profile";
 import Counter from "./Components/Counter"; 
 import ConditionalCom from "./Components/ConditionalCom";
+import List from "./Components/List";
+import Form from "./Components/Form";
 
 function App() {
   return (
@@ -13,6 +15,8 @@ function App() {
       <Nav />
       <Counter />
       <ConditionalCom/>
+      <List/>
+      <Form/>
     </div>
   );
 }
